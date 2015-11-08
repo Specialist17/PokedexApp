@@ -15,6 +15,7 @@
 		9060E1891BEEF6900045206E /* Pokedex_by_SpecialistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060E1881BEEF6900045206E /* Pokedex_by_SpecialistTests.swift */; };
 		9060E1941BEEF6900045206E /* Pokedex_by_SpecialistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060E1931BEEF6900045206E /* Pokedex_by_SpecialistUITests.swift */; };
 		9060E1A21BEEFC3F0045206E /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9060E1A11BEEFC3F0045206E /* pokemon.csv */; };
+		9060E1A41BEF00AD0045206E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060E1A31BEF00AD0045206E /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9060E1931BEEF6900045206E /* Pokedex_by_SpecialistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokedex_by_SpecialistUITests.swift; sourceTree = "<group>"; };
 		9060E1951BEEF6900045206E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9060E1A11BEEFC3F0045206E /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		9060E1A31BEF00AD0045206E /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				9060E1731BEEF6900045206E /* AppDelegate.swift */,
 				9060E1751BEEF6900045206E /* ViewController.swift */,
+				9060E1A31BEF00AD0045206E /* Pokemon.swift */,
 				9060E1771BEEF6900045206E /* Main.storyboard */,
 				9060E17A1BEEF6900045206E /* Assets.xcassets */,
 				9060E17C1BEEF6900045206E /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				9060E1761BEEF6900045206E /* ViewController.swift in Sources */,
 				9060E1741BEEF6900045206E /* AppDelegate.swift in Sources */,
+				9060E1A41BEF00AD0045206E /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
