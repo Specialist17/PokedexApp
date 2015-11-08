@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="PokemonSolid.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="qNZ-bx-rfJ">
@@ -24,9 +29,39 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-TD-bJ6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqB-Aa-pvJ">
+                                        <rect key="frame" x="119" y="15" width="137" height="38"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="EMY-lS-M4x"/>
+                                            <constraint firstAttribute="width" constant="137" id="fWK-aj-Nbc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-8v-zm8">
+                                        <rect key="frame" x="275" y="8" width="50" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="HYW-Og-ijT"/>
+                                            <constraint firstAttribute="height" constant="40" id="hKB-cA-7bu"/>
+                                        </constraints>
+                                        <state key="normal" image="pikachuMusic"/>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.44387067559999999" blue="0.37749472890000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="cHm-8v-zm8" firstAttribute="leading" secondItem="MqB-Aa-pvJ" secondAttribute="trailing" constant="19" id="0IM-tk-ZVz"/>
+                                    <constraint firstItem="MqB-Aa-pvJ" firstAttribute="leading" secondItem="F8q-TD-bJ6" secondAttribute="leading" constant="119" id="2Za-Hy-Nf6"/>
+                                    <constraint firstItem="cHm-8v-zm8" firstAttribute="leading" secondItem="MqB-Aa-pvJ" secondAttribute="trailing" constant="19" id="Kca-S3-XBE"/>
+                                    <constraint firstAttribute="bottom" secondItem="MqB-Aa-pvJ" secondAttribute="bottom" constant="2" id="Ybq-Wf-Oif"/>
+                                    <constraint firstAttribute="trailing" secondItem="cHm-8v-zm8" secondAttribute="trailing" constant="50" id="dLS-qa-KCm"/>
+                                    <constraint firstAttribute="bottom" secondItem="cHm-8v-zm8" secondAttribute="bottom" constant="7" id="dcw-h1-VKt"/>
+                                    <constraint firstItem="cHm-8v-zm8" firstAttribute="top" secondItem="F8q-TD-bJ6" secondAttribute="top" constant="8" id="dvV-ot-ciE"/>
+                                    <constraint firstItem="MqB-Aa-pvJ" firstAttribute="top" secondItem="F8q-TD-bJ6" secondAttribute="top" constant="15" id="iye-vn-7vv"/>
                                     <constraint firstAttribute="height" constant="55" id="uKd-ME-qKE"/>
                                 </constraints>
                             </view>
@@ -39,7 +74,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B6S-vg-rDv">
-                                <rect key="frame" x="20" y="121" width="335" height="526"/>
+                                <rect key="frame" x="16" y="121" width="335" height="526"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -59,7 +94,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="5sV-BE-Cy5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="5sV-BE-Cy5">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="89"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="0.47534839527027029" colorSpace="calibratedWhite"/>
@@ -124,7 +159,8 @@
                             <constraint firstItem="71T-Hg-pAE" firstAttribute="top" secondItem="F8q-TD-bJ6" secondAttribute="bottom" id="wAs-l2-KDW"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="collection" destination="B6S-vg-rDv" id="lP4-RU-oyF"/>
                     </connections>
@@ -137,5 +173,6 @@
     <resources>
         <image name="7" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="pikachuMusic" width="753" height="611"/>
     </resources>
 </document>
