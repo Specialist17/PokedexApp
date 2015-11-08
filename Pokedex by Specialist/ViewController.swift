@@ -28,6 +28,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell{
             
+            let pokemon = Pokemon(name: "Test", pokedexId: indexPath.row + 1)
+            cell.configureCell(pokemon)
+            
             return cell
             
         }else{
@@ -42,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return 718
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
