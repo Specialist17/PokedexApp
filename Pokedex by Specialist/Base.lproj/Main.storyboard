@@ -49,6 +49,9 @@
                                             <constraint firstAttribute="height" constant="40" id="hKB-cA-7bu"/>
                                         </constraints>
                                         <state key="normal" image="pikachuMusic"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="Ihq-Ff-Dqc" eventType="touchUpInside" id="Ub1-Ae-n10"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -65,7 +68,7 @@
                                     <constraint firstAttribute="height" constant="55" id="uKd-ME-qKE"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="71T-Hg-pAE">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="71T-Hg-pAE">
                                 <rect key="frame" x="0.0" y="55" width="375" height="44"/>
                                 <animations/>
                                 <constraints>
@@ -144,7 +147,7 @@
                             <constraint firstItem="71T-Hg-pAE" firstAttribute="trailing" secondItem="F8q-TD-bJ6" secondAttribute="trailing" id="5fG-Sn-uHQ"/>
                             <constraint firstItem="DDL-IE-mh6" firstAttribute="top" secondItem="F8q-TD-bJ6" secondAttribute="bottom" constant="44" id="6zz-sb-nw0"/>
                             <constraint firstAttribute="trailing" secondItem="F8q-TD-bJ6" secondAttribute="trailing" id="Blp-Wv-iJg"/>
-                            <constraint firstItem="71T-Hg-pAE" firstAttribute="centerX" secondItem="B6S-vg-rDv" secondAttribute="centerX" id="GA6-L1-CC3"/>
+                            <constraint firstItem="71T-Hg-pAE" firstAttribute="centerX" secondItem="B6S-vg-rDv" secondAttribute="centerX" constant="4" id="GA6-L1-CC3"/>
                             <constraint firstItem="B6S-vg-rDv" firstAttribute="top" secondItem="71T-Hg-pAE" secondAttribute="bottom" constant="22" id="HCj-RA-f4W"/>
                             <constraint firstAttribute="trailing" secondItem="F8q-TD-bJ6" secondAttribute="trailing" id="Hfa-RQ-v5g"/>
                             <constraint firstItem="DDL-IE-mh6" firstAttribute="trailing" secondItem="71T-Hg-pAE" secondAttribute="trailing" id="Iqi-aS-NYi"/>
@@ -153,7 +156,7 @@
                             <constraint firstAttribute="bottom" secondItem="B6S-vg-rDv" secondAttribute="bottom" constant="20" symbolic="YES" id="cUr-TP-Nkp"/>
                             <constraint firstItem="DDL-IE-mh6" firstAttribute="bottom" secondItem="5lV-gG-jSX" secondAttribute="top" id="mTe-PH-Nea"/>
                             <constraint firstItem="F8q-TD-bJ6" firstAttribute="leading" secondItem="71T-Hg-pAE" secondAttribute="leading" id="mfs-wI-WI2"/>
-                            <constraint firstItem="B6S-vg-rDv" firstAttribute="leading" secondItem="aNi-p7-BK7" secondAttribute="leadingMargin" id="mhf-2i-ztl"/>
+                            <constraint firstItem="B6S-vg-rDv" firstAttribute="leading" secondItem="aNi-p7-BK7" secondAttribute="leadingMargin" constant="-4" id="mhf-2i-ztl"/>
                             <constraint firstItem="B6S-vg-rDv" firstAttribute="top" secondItem="71T-Hg-pAE" secondAttribute="bottom" constant="22" id="u00-3g-l0r"/>
                             <constraint firstItem="F8q-TD-bJ6" firstAttribute="top" secondItem="aNi-p7-BK7" secondAttribute="top" id="vXr-8Z-gQm"/>
                             <constraint firstItem="71T-Hg-pAE" firstAttribute="top" secondItem="F8q-TD-bJ6" secondAttribute="bottom" id="wAs-l2-KDW"/>
@@ -163,6 +166,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="collection" destination="B6S-vg-rDv" id="lP4-RU-oyF"/>
+                        <outlet property="searchBar" destination="71T-Hg-pAE" id="KAc-TI-GAx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMn-FX-KbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
