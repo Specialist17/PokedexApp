@@ -29,9 +29,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Keyboard gets the "done" key
         searchBar.returnKeyType = UIReturnKeyType.Done
         
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+//        //Looks for single or multiple taps.
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+//        view.addGestureRecognizer(tap)
         
         initAudio()
         parsePokemonCSV()
@@ -103,6 +103,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        var poke: Pokemon!
+        
+        if inSearchMode{
+            poke = filteredPokemon[indexPath.row]
+        }else{
+            poke = pokemon[indexPath.row]
+        }
+        
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -111,9 +120,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         return pokemon.count
-        
-        
     }
+    
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -164,16 +172,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         view.endEditing(true)
     }
     
-    //closes the keyboard when touching on main view
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-        self.collection.endEditing(true)
-    }
+//    //closes the keyboard when touching on main view
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.view.endEditing(true)
+//        self.collection.endEditing(true)
+//    }
+//    
+//    //Calls this function when the tap is recognized.
+//    func dismissKeyboard() {
+//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+//        view.endEditing(true)
+//    }
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
+        }
     }
 
 }
