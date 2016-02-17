@@ -6,3 +6,10 @@ To learn how to parse JSON objects and use external dependencies with cocoapods
 
 ## Dependecies Used
 - Alamofire
+
+## Techniques Learned
+- Parsing JSON
+- Collection Views
+- Stack Views
+- .csv Parsing
+- OOP in Swift2.0
