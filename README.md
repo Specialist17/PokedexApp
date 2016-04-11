@@ -13,3 +13,6 @@ To learn how to parse JSON objects and use external dependencies with cocoapods
 - Stack Views
 - .csv Parsing
 - OOP in Swift2.0
+
+## Preview
+![Alt Text](http://i.imgur.com/VLjGKzj.gifv)
