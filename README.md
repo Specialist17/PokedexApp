@@ -15,4 +15,4 @@ To learn how to parse JSON objects and use external dependencies with cocoapods
 - OOP in Swift2.0
 
 ## Preview
-![Alt Text](http://i.imgur.com/VLjGKzj.gifv)
+![Alt Text](http://imgur.com/VLjGKzj)
